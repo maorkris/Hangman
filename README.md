@@ -1,8 +1,9 @@
 Hangman Game
 
+![unnamed](https://github.com/maorkris/Hangman/assets/142143890/9c65e2b3-3d21-4a89-bcfa-dcb688b9a0a5)
+
 
 Description:
-![unnamed](https://github.com/maorkris/Hangman/assets/142143890/9c65e2b3-3d21-4a89-bcfa-dcb688b9a0a5)
 
 This Python game challenges you to guess a secret word letter by letter. Be careful, you only have 6 tries before the hangman is complete!
 
