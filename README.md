@@ -1,8 +1,8 @@
 Hangman Game
 
-https://www.canva.com/design/DAF5yU6WYb8/awrOhio1GvXfJVPKkYYIAw/edit?utm_content=DAF5yU6WYb8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+https://www.canva.com/design/DAF5yU6WYb8/kHQ7nkPdf8t2kqwMJt2Jxw/view?utm_content=DAF5yU6WYb8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel
 
-![unnamed](https://github.com/maorkris/Hangman/assets/142143890/9c65e2b3-3d21-4a89-bcfa-dcb688b9a0a5)
+
 
 
 Description:
