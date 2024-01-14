@@ -1,7 +1,9 @@
 Hangman Game
 
 
-![Uploading צילום מסך 2024-01-14 ב-13.18.00.png…]()
+
+
+![Beige Illustrated Volunteers Day Flyer  (פוסט של פייסבוק)](https://github.com/maorkris/Hangman/assets/142143890/d60cc5cc-d0f1-4ef9-af0f-f69b7997cfb7)
 
 
 Description:
