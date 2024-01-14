@@ -1,8 +1,7 @@
 Hangman Game
 
-https://www.canva.com/design/DAF5yU6WYb8/kHQ7nkPdf8t2kqwMJt2Jxw/view?utm_content=DAF5yU6WYb8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel
 
-
+![Uploading צילום מסך 2024-01-14 ב-13.18.00.png…]()
 
 
 Description:
