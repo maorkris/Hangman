@@ -90,6 +90,8 @@ def show_hidden_word(secret_word, old_letters_guessed):
 
     result = ""
     for i in secret_word:
+        if i == " ":
+            continue
         if i in old_letters_guessed:
             result += (i + " ")
         else:
@@ -152,12 +154,13 @@ def main():
 
     secret_word = choose_word(file_from_user, random.randint(1, 100))
     old_letters_guessed = []
-    MAX_TRIES = 6
-    num_of_tries = 0
+    MAX_TRIES = 7
+    num_of_tries = 1
     print_hangman(0)
     while MAX_TRIES > num_of_tries and not check_win(secret_word,old_letters_guessed):
         if num_of_tries == MAX_TRIES:
             if check_win(secret_word, old_letters_guessed):
+                print(f" The secret Word is : {secret_word.upper()}")
                 return WIN_MESSAGE
             else:
                 print(f" The secret Word is : {secret_word.upper()}")
@@ -175,14 +178,15 @@ def main():
     else:
 
         if check_win(secret_word,old_letters_guessed):
-            return WIN_MESSAGE
-            print(secret_word)
+            print(f"The secret Word is : {secret_word.upper()}")
+            return Fore.LIGHTMAGENTA_EX + WIN_MESSAGE + Style.RESET_ALL
         else:
-                print(f" The secret Word is : {secret_word.upper()}")
-                return LOSE_MESSAGE
+                print()
+                return Fore.RED + LOSE_MESSAGE + f"\nThe secret Word was : {secret_word.upper()}{Style.RESET_ALL}"
 
 
 
 if __name__ == "__main__":
     print(main())
+
     pass
