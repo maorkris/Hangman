@@ -71,7 +71,7 @@ def try_update_letter_guessed(letter_guessed, old_letters_guessed,secret_word):
     joined_sorted_old_letters = " -> ".join(sorted(old_letters_guessed))
     if check_valid_input(letter_guessed, old_letters_guessed):
         old_letters_guessed.append(letter_guessed)
-        print(f"Letter '{letter_guessed}' added to guessed letters: {Fore.LIGHTYELLOW_EX +joined_sorted_old_letters + Style.RESET_ALL} ")
+        print(f"Letter '{Fore.YELLOW}{letter_guessed}{Fore.RESET}' added to guessed letters: {Fore.LIGHTYELLOW_EX +joined_sorted_old_letters + Style.RESET_ALL} ")
         if letter_guessed not in secret_word:
             return True
     else:
@@ -112,21 +112,20 @@ def check_win(secret_word, old_letters_guessed):
 
 def choose_word(file_path, index):
     """
-    This function chooses a word from a file
-    :param file_path: The path to the file
-    :param index: The index of the word to choose
-    :return: The chosen word
+    Chooses a word from a file based on the given index. If the index exceeds the number of words, it wraps around.
+
+    :param file_path: Path to a file with comma-separated words.
+    :param index: Index of the word to choose.
+    :return: A tuple of the chosen word and the total number of unique words.
     """
     words_arr = []
     with open(file_path) as file:
-        words = file.read().split(",")
+        words = file.read().split(','.sp)
         for i in words:
-            if i not in words_arr:
-                words_arr.append(i)
+            words_arr.append(i.strip())
 
         index = index % len(words)
-        return words[index -1]
-
+        return words_arr[index -1]
 
 def main():
 
@@ -157,6 +156,7 @@ def main():
     MAX_TRIES = 7
     num_of_tries = 1
     print_hangman(0)
+    print(secret_word)
     while MAX_TRIES > num_of_tries and not check_win(secret_word,old_letters_guessed):
         if num_of_tries == MAX_TRIES:
             if check_win(secret_word, old_letters_guessed):
@@ -176,7 +176,6 @@ def main():
                 num_of_tries += 1
 
     else:
-
         if check_win(secret_word,old_letters_guessed):
             print(f"The secret Word is : {secret_word.upper()}")
             return Fore.LIGHTMAGENTA_EX + WIN_MESSAGE + Style.RESET_ALL
@@ -187,6 +186,7 @@ def main():
 
 
 if __name__ == "__main__":
+
     print(main())
 
     pass
