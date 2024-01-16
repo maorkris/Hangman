@@ -71,7 +71,7 @@ def try_update_letter_guessed(letter_guessed, old_letters_guessed,secret_word):
     joined_sorted_old_letters = " -> ".join(sorted(old_letters_guessed))
     if check_valid_input(letter_guessed, old_letters_guessed):
         old_letters_guessed.append(letter_guessed)
-        print(f"Letter '{Fore.YELLOW}{letter_guessed}{Fore.RESET}' added to guessed letters: {Fore.LIGHTYELLOW_EX +joined_sorted_old_letters + Style.RESET_ALL} ")
+        print(f"Letter '{Fore.LIGHTYELLOW_EX}{letter_guessed}{Fore.RESET}' added to guessed letters: {Fore.LIGHTYELLOW_EX +joined_sorted_old_letters + Style.RESET_ALL} ")
         if letter_guessed not in secret_word:
             return True
     else:
@@ -120,7 +120,7 @@ def choose_word(file_path, index):
     """
     words_arr = []
     with open(file_path) as file:
-        words = file.read().split(','.sp)
+        words = file.read().split(',')
         for i in words:
             words_arr.append(i.strip())
 
@@ -156,7 +156,6 @@ def main():
     MAX_TRIES = 7
     num_of_tries = 1
     print_hangman(0)
-    print(secret_word)
     while MAX_TRIES > num_of_tries and not check_win(secret_word,old_letters_guessed):
         if num_of_tries == MAX_TRIES:
             if check_win(secret_word, old_letters_guessed):
