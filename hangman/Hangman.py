@@ -33,6 +33,7 @@ def guess_a_letter ():
     print()
     hebrew_letters = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ז', 'ח', 'ט', 'י', 'כ', 'ל', 'מ', 'נ', 'ס', 'ע', 'פ', 'צ', 'ק','ר', 'ש', 'ת']
     get_one_letter = input("Guess a letter:")
+
     while get_one_letter.isalpha() and len(get_one_letter) == 1 and get_one_letter not in hebrew_letters:
         return get_one_letter.lower()
     else:
@@ -90,8 +91,6 @@ def show_hidden_word(secret_word, old_letters_guessed):
 
     result = ""
     for i in secret_word:
-        if i == " ":
-            continue
         if i in old_letters_guessed:
             result += (i + " ")
         else:
@@ -126,6 +125,7 @@ def choose_word(file_path, index):
 
         index = index % len(words)
         return words_arr[index -1]
+
 
 def main():
 
