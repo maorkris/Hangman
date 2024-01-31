@@ -6,7 +6,7 @@ Hangman Game
 ![Beige Illustrated Volunteers Day Flyer  (פוסט של פייסבוק)](https://github.com/maorkris/Hangman/assets/142143890/d60cc5cc-d0f1-4ef9-af0f-f69b7997cfb7)
 
 
-Description:
+### Description:
 
 This Python game challenges you to guess a secret word letter by letter. Be careful, you only have 6 tries before the hangman is complete!
 
