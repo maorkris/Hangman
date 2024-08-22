@@ -38,6 +38,8 @@ Enjoy the game!
 
  Here is a summary of the functions in your hangman game code:
 
+ 
+
 The `print_welcome` function prints the opening screen of the game. It sets the maximum number of attempts to 6 and prints the game logo and number of attempts remaining for the player.
 
 The `print_hangman` function prints the hangman image corresponding to the number of attempts the player has tried.
